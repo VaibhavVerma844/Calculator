@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1><u>Caclulator</u></h1>
+    <form id="calculator">
+        <div id="container">
+            <div id="result"> anwser</div>
+            <input type="number" name="first" id="first" placeholder="first number">
+            <input type="number" name="second" id="second" placeholder="second number">
+
+            <button id="add" onclick="return add_num()">Add (+)</button>
+            <button id="sub" onclick="return sub_num()">Sub (-)</button>
+            <button id="multi" onclick="return multi_num()">Multiplication (x)</button>
+            <button id="divide" onclick="return divide_num()">Divide (/)</button>
+            <button id="rem" onclick="return rem_num()">Modulo (%)</button>
+            <input id="rem" type="reset" value="Reset">
+        </div>        
+    </form>
+    <script>
+        function add_num()
+        {
+            var a = Number(document.getElementById("first").value);
+            var b = Number(document.getElementById("second").value);
+            var c = a+b;
+            var d = document.getElementById("result");
+                d.innerHTML= "Answer:-  "+c
+                return false;  
+        }
+
+        function sub_num()
+        {
+            var a = Number(document.getElementById("first").value);
+            var b = Number(document.getElementById("second").value);
+            var c = a-b;
+            var d = document.getElementById("result");
+                d.innerHTML= "Answer:-  "+c
+                return false;
+        }
+
+        function multi_num()
+        {
+            var a = Number(document.getElementById("first").value);
+            var b = Number(document.getElementById("second").value);
+            var c = a*b;
+            var d = document.getElementById("result");
+                d.innerHTML= "Answer:-  "+c
+                return false;
+        }
+
+        function divide_num()
+        {
+            var a = Number(document.getElementById("first").value);
+            var b = Number(document.getElementById("second").value);
+            var c = a/b;
+            var d = document.getElementById("result");
+                d.innerHTML= "Answer:-  "+c
+                return false;
+        }
+
+        function rem_num()
+        {
+            var a = Number(document.getElementById("first").value);
+            var b = Number(document.getElementById("second").value);
+            var c = a%b;
+            var d = document.getElementById("result");
+                d.innerHTML= "Answer:-  "+c
+                return false;
+        }
+
+    </script>
+</body>
+
+</html>
